@@ -1,6 +1,7 @@
 # This code sample uses the 'requests' library:
 # http://docs.python-requests.org
 import requests
+import os 
 from requests.auth import HTTPBasicAuth
 import json
 from flask import Flask
@@ -13,7 +14,7 @@ def createJira():
 
     url = "https://nirmal12.atlassian.net/rest/api/3/issue"
 
-    
+    api_token = os.environ.get("api_token")
     auth = HTTPBasicAuth("nirmal.elex@gmail.com", api_token)
 
     headers = {
