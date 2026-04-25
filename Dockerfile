@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY Jiragithubpython.py .
 
