@@ -14,7 +14,7 @@ def createJira():
 
     url = "https://nirmal12.atlassian.net/rest/api/3/issue"
 
-    api_token = os.environ.get("api_token")
+    api_token = os.environ.get("api")
     auth = HTTPBasicAuth("nirmal.elex@gmail.com", api_token)
 
     headers = {
